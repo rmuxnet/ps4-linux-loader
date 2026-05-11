@@ -1,4 +1,4 @@
-# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 5.05 - 13.02
+# ![PS4](https://img.shields.io/badge/-PS4-003791?style=flat&logo=PlayStation) Linux Payloads for FW 5.05 - 13.50
 (Southbridge: Aeolia & Belize(2) & Baikal)
 
 **Linux-Payloads** kexec for PlayStation 4.
@@ -28,7 +28,8 @@ There's also a great [Linux setup guide by DionKill](https://dionkill.github.io/
 *   FW 12.00 / 12.02 ✅ 
 *   FW 12.50 / 12.52 ✅
 *   FW 13.00 ✅
-*   FW 13.02(?) ✅
+*   FW 13.02(?) / FW 13.04(?)✅
+*   FW 13.50(?) ✅
 
 ## Info 
 The internal path by default is at: ``/data/linux/boot``, however it'll also check for ``/user/system/boot/`` in case it was not found.
@@ -39,6 +40,7 @@ so you can go into the rescue shell without a usb stick just upload the ``bzImag
 ``/data/linux/boot/[bzimage,initramfs.cpio.gz]`` 
 
 or
+
 ``/user/system/boot/[bzimage,initramfs.cpio.gz]`` 
 
 and of course it will work too with a USB / HDD Drive.  USB have highest priority. If a USB is connected, it will use the bzImage and initramfs.cpio.gz from there .
@@ -95,6 +97,8 @@ Baikal: ``console=uart8250,mmio32,0xC890E000``
 
 
 ## Change log
+- PS4 13.04 & 13.50 Support. [v24b.1](https://github.com/ArabPixel/ps4-linux-payloads/releases/tag/v24b.1)
+
 - PS4 PRO, Southbridge and firmware version run-time detection [v24b](https://github.com/ArabPixel/ps4-linux-payloads/releases/tag/v24b)
   - No more separate Baikal or PRO payloads
   - firmware agnostic payload. AKA one payload works for all supported firmware versions
