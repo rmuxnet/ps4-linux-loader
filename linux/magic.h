@@ -388,7 +388,7 @@
 #define kern_off_set_pstate 0x004dc040
 #define kern_off_update_vddnp 0x004d8a40
 #define kern_off_set_cu_power_gate 0x004d8e50
-#define kern_off_pstate_before_shutdown 0x0045dcc0
+#define kern_off_pstate_before_shutdown 0x45dcc0
 #define kern_off_set_nclk_mem_spd 0x18170
 
 #elif defined PS4_11_00 //EinTim23
@@ -604,6 +604,7 @@
 #define kern_off_pstate_before_shutdown 0x3A23C0
 #define kern_off_set_nclk_mem_spd 0x4368F0
 
+// 13.02 & 13.04
 #elif defined PS4_13_02 //ArabPixel
 #define kern_off_printf 0x2E0450
 #define kern_off_snprintf 0x2E0750
@@ -638,5 +639,40 @@
 #define kern_off_set_cu_power_gate 0x4BA450
 #define kern_off_pstate_before_shutdown 0x3A23D0
 #define kern_off_set_nclk_mem_spd 0x436900
+
+#elif defined PS4_13_50 //ArabPixel
+#define kern_off_printf 0x2E0460
+#define kern_off_snprintf 0x2E0760
+#define kern_off_copyin 0x2BD6F0
+#define kern_off_copyout 0x2BD600
+#define kern_off_copyinstr 0x2BDBA0
+#define kern_off_kmem_alloc_contig 0x24D450
+#define kern_off_kmem_free 0x466060
+#define kern_off_pmap_extract 0x573D0
+#define kern_off_pmap_protect 0x58570
+#define kern_off_sched_pin 0x231680
+#define kern_off_sched_unpin 0x2316A0
+#define kern_off_smp_rendezvous 0x1AD540
+#define kern_off_smp_no_rendevous_barrier 0x1AD350
+#define kern_off_icc_query_nowait 0x447F80
+#define kern_off_kernel_map 0x22D1D50
+#define kern_off_sysent 0x1102B70
+#define kern_off_kernel_pmap_store 0x1B2C3A0
+#define kern_off_Starsha_UcodeInfo 0x0
+#define kern_off_gpu_devid_is_9924 0x4AC9F0
+#define kern_off_gc_get_fw_info 0x4BB3A0
+#define kern_off_pml4pml4i 0x1B2C390
+#define kern_off_dmpml4i 0x1b2c394
+#define kern_off_dmpdpi 0x1B2C398
+#define kern_off_eap_hdd_key 0x26C4CF0
+#define kern_off_edid 0x275E148
+#define kern_off_wlanbt 0x478EA0
+#define kern_off_kern_reboot 0x3A21A0
+#define kern_off_set_gpu_freq 0x4B9EE0
+#define kern_off_set_pstate 0x4BC2B0
+#define kern_off_update_vddnp 0x4BA480
+#define kern_off_set_cu_power_gate 0x4BA890
+#define kern_off_pstate_before_shutdown 0x3A2780
+#define kern_off_set_nclk_mem_spd 0x436D40
 
 #endif

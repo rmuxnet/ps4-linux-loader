@@ -12,7 +12,7 @@
 SIZES_MB = 32 64 128 256 512 1024 2048 3072 4096
 
 FIRMWARES = 505 672 700 750 800 850 900 903 960 \
-            1000 1050 1100 1102 1150 1200 1250 1300 1302
+            1000 1050 1100 1102 1150 1200 1250 1300 1302 1350
 
 FW_DEFINE_505  = PS4_5_05
 FW_DEFINE_672  = PS4_6_72
@@ -32,6 +32,7 @@ FW_DEFINE_1200 = PS4_12_00
 FW_DEFINE_1250 = PS4_12_50
 FW_DEFINE_1300 = PS4_13_00
 FW_DEFINE_1302 = PS4_13_02
+FW_DEFINE_1350 = PS4_13_50
 
 KEXEC_BUILD_DIR = kexec-build
 KEXEC_COMMON_DIR = ps4-kexec-common
@@ -87,7 +88,7 @@ $(KEXEC_BUILD_DIR)/%/kexec.bin:
 	    -O binary $@
 
 define make-aio-rules
-payloads/linux-$(1)mb.elf: ../lib/lib.a main-aio.c fw_detect.c $(KEXEC_BINS)
+payloads/linux-$(1)mb.elf: ../lib/lib.a main-aio.c fw_detect.c fw_offsets.h fw_detect.h sb_detect.h $(KEXEC_BINS)
 	@mkdir -p payloads
 	$(CC) $(CFLAGS) ../lib/lib.a \
 	    -DVRAM_MB_DEFAULT=$(1) \

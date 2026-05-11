@@ -52,7 +52,11 @@
 #ifdef __13_02__
 #include "1302.h"
 #else
+#ifdef __13_50__
+#include "1350.h"
+#else
 #error "unsupported firmware"
+#endif
 #endif
 #endif
 #endif

@@ -185,6 +185,8 @@ u16 normalize_fw_ver(u16 raw_fw)
             return 1200;
         case 1252:
             return 1250;
+        case 1304:
+            return 1302;
         default:
             return raw_fw;
     }
