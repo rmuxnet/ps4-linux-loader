@@ -30,6 +30,7 @@ There's also a great [Linux setup guide by DionKill](https://dionkill.github.io/
 *   FW 13.00 ✅
 *   FW 13.02(?) / FW 13.04(?)✅
 *   FW 13.50(?) ✅
+*   FW 13.52(?) ✅
 
 ## Info 
 The internal path by default is at: ``/data/linux/boot``, however it'll also check for ``/user/system/boot/`` in case it was not found.
@@ -92,11 +93,14 @@ Baikal: ``console=uart8250,mmio32,0xC890E000``
 * sleirsgoevy (for the script and better exploit FW 672) 
 * AlAzif / KiwiDog / Specter / Celesteblue / ChendoChap / zecoxao / SocraticBliss / ctn123 (Exploit and Fun Stuff for the Console)
 * bestpig / EchoStretch / EinTim23 / tihmstar / ArabPixel (Offsets)
+* rmuxnet / ArabPixel (for making this loader firmware/southbridge agnostic)
 * Contributors
 * others ...
 
 
 ## Change log
+- PS4 13.52 Support + Edid fix. [v25](https://github.com/ArabPixel/ps4-linux-payloads/releases/tag/v25)
+
 - PS4 13.04 & 13.50 Support. [v24b.1](https://github.com/ArabPixel/ps4-linux-payloads/releases/tag/v24b.1)
 
 - PS4 PRO, Southbridge and firmware version run-time detection [v24b](https://github.com/ArabPixel/ps4-linux-payloads/releases/tag/v24b)

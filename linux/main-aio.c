@@ -69,6 +69,7 @@ asm("kexec_1250:\n.incbin \"kexec-build/1250/kexec.bin\"\nkexec_1250_end:\n");
 asm("kexec_1300:\n.incbin \"kexec-build/1300/kexec.bin\"\nkexec_1300_end:\n");
 asm("kexec_1302:\n.incbin \"kexec-build/1302/kexec.bin\"\nkexec_1302_end:\n");
 asm("kexec_1350:\n.incbin \"kexec-build/1350/kexec.bin\"\nkexec_1350_end:\n");
+asm("kexec_1352:\n.incbin \"kexec-build/1352/kexec.bin\"\nkexec_1352_end:\n");
 
 /* Forward declarations for all blob symbols */
 extern char kexec_505[], kexec_505_end[];
@@ -90,6 +91,7 @@ extern char kexec_1250[], kexec_1250_end[];
 extern char kexec_1300[], kexec_1300_end[];
 extern char kexec_1302[], kexec_1302_end[];
 extern char kexec_1350[], kexec_1350_end[];
+extern char kexec_1352[], kexec_1352_end[];
 
 // Globals set by main() and used by kernel_main()
 // kernel_main() runs in kernel context but can still read
@@ -139,6 +141,7 @@ static void get_kexec_blob(u16 norm_fw, char **start, char **end)
     case 1300: *start = kexec_1300; *end = kexec_1300_end; break;
     case 1302: *start = kexec_1302; *end = kexec_1302_end; break;
     case 1350: *start = kexec_1350; *end = kexec_1350_end; break;
+    case 1352: *start = kexec_1352; *end = kexec_1352_end; break;
     default:   *start = (char *)0;  *end = (char *)0;      break;
     }
 }

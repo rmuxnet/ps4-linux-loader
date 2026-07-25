@@ -29,7 +29,6 @@ u16 get_firmware(void);
  *   1152     → 1150
  *   1202     → 1200
  *   1252     → 1250
- *   1302     → 1300  (NOTE: 1302 IS its own distinct fw with its own entry)
  *
  * For any unrecognised alias the raw value is returned unchanged so that
  * the caller can distinguish "no entry" from "wrong alias".
