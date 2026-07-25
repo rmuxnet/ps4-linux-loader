@@ -15,6 +15,7 @@
 #include "kernel.h"
 #include "uart.h"
 #include "acpi.h"
+#include "kexec.h"
 #include "../sb_detect.h"
 
 extern u8 sb_id;
@@ -406,6 +407,8 @@ static void cpu_quiesce_gate(void *arg)
 //    udelay(150);
     *(volatile u64 *)PA_TO_DM(0xe4800e60) &= ~0x00100140;
 //    udelay(150);
+
+    configure_gpu_power();
 
     // Enable audio output
     *(volatile u64 *)PA_TO_DM(0xe4805e00) = 0x154;
