@@ -391,10 +391,7 @@ ssize_t firmware_extract(void *dest)
 	copy_edid(&p, edid_sz);
     
     char dir[7];
-    if (kern.gpu_devid_is_9924 && kern.gpu_devid_is_9924())
-      kern.snprintf(dir, sizeof(dir), "amdgpu");
-    else
-      kern.snprintf(dir, sizeof(dir), "amdgpu");
+    kern.snprintf(dir, sizeof(dir), "amdgpu");
 
     char dir_path[64];
     kern.snprintf(dir_path, sizeof(dir_path), "lib/firmware/%s/", dir);
