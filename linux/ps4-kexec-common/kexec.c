@@ -161,7 +161,7 @@ int sys_kexec(void *td, struct sys_kexec_args *uap)
     kern.set_gpu_freq(0, 800); //800 //800
     kern.set_gpu_freq(3, 800); //800 //800
     kern.set_gpu_freq(7, 673); //673 //673
-    kern.update_vddnp(0x12);
+    kern.update_vddnp(0x24);
 
     // Copy in kernel image
     image = kernel_alloc_contig(uap->image_size);
