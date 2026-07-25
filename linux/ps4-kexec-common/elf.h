@@ -29,7 +29,7 @@ typedef struct {
     u16 e_phnum;
     u16 e_shentsize;
     u16 e_shnum;
-    u16 e_shtrndx;
+    u16 e_shstrndx;
 } Elf64_Ehdr;
 
 typedef struct {
